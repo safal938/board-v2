@@ -1,0 +1,470 @@
+[
+    {
+        "id": "dashboard-item-1759853783245-patient-context",
+        "type": "component",
+        "x": 100,
+        "y": 100,
+        "width": 1600,
+        "height": 300,
+        "componentType": "PatientContext",
+        "description": "",
+        "content": {
+            "title": "Patient Context",
+            "component": "PatientContext",
+            "props": {
+                "patientData": {
+                    "patient": {
+                        "name": "Sarah Miller",
+                        "age": 43,
+                        "dob": "1980-10-15",
+                        "sex": "Female",
+                        "maritalStatus": "Married",
+                        "address": "123 Maple Drive, Anytown, USA",
+                        "occupation": "Senior accountant",
+                        "primaryLanguage": "English",
+                        "phone": "(555) 123-4567",
+                        "mrn": "MC-001001"
+                    },
+                    "riskLevel": "high",
+                    "primaryDiagnosis": "Severe polyarticular rheumatoid arthritis (RA)",
+                    "allergies": [
+                        "Penicillin (rash)",
+                        "Sulfa (hives)",
+                        "Codeine (nausea)"
+                    ]
+                }
+            }
+        },
+        "createdAt": "2025-10-14T16:16:23.245Z",
+        "updatedAt": "2025-10-14T16:16:23.245Z"
+    },
+    {
+        "id": "dashboard-item-1759906076097-encounter-timeline",
+        "type": "component",
+        "x": 100,
+        "y": 450,
+        "width": 1600,
+        "height": 400,
+        "componentType": "EncounterTimeline",
+        "description": "",
+        "content": {
+            "title": "Patient Encounter Timeline",
+            "component": "EncounterTimeline",
+            "props": {
+                "encounters": [
+                    {
+                        "id": "enc-2015-08-10-001",
+                        "date": "2015-08-10",
+                        "type": "Rheumatology",
+                        "provider": "Dr. Smith",
+                        "diagnosis": "Rheumatoid Arthritis - Initial Treatment",
+                        "medications": [
+                            "Methotrexate 10mg weekly",
+                            "Folic Acid 1mg daily"
+                        ],
+                        "labs": [
+                            "LFTs ordered"
+                        ],
+                        "notes": "Started MTX therapy with folic acid supplementation"
+                    },
+                    {
+                        "id": "enc-2024-10-20-001",
+                        "date": "2024-10-20",
+                        "type": "Rheumatology",
+                        "provider": "Dr. Johnson",
+                        "diagnosis": "RA flare with elevated inflammatory markers",
+                        "medications": [
+                            "Tofacitinib 5mg BID",
+                            "Lisinopril 10mg daily",
+                            "Atorvastatin 20mg nightly"
+                        ],
+                        "labs": [
+                            "CRP 28 mg/L",
+                            "ESR 38 mm/hr",
+                            "LFTs ordered"
+                        ],
+                        "notes": "RA flare, continuing current therapy"
+                    },
+                    {
+                        "id": "enc-2025-09-05-001",
+                        "date": "2025-09-05",
+                        "type": "Rheumatology",
+                        "provider": "Dr. Johnson",
+                        "diagnosis": "RA - MTX reintroduction",
+                        "medications": [
+                            "Methotrexate 15mg weekly",
+                            "Folic Acid 5mg weekly"
+                        ],
+                        "labs": [
+                            "Glucose 98 mg/dL",
+                            "LDL 110 mg/dL"
+                        ],
+                        "notes": "Restarted MTX at higher dose despite prior GI intolerance"
+                    },
+                    {
+                        "id": "enc-2026-07-10-001",
+                        "date": "2026-07-10",
+                        "type": "Primary Care",
+                        "provider": "Dr. Williams",
+                        "diagnosis": "RA with chronic fatigue, T2DM, HTN",
+                        "medications": [
+                            "Methotrexate 15mg weekly",
+                            "Hydroxychloroquine 200mg BID",
+                            "Lisinopril 10mg daily"
+                        ],
+                        "labs": [
+                            "TSH 2.1 mIU/L",
+                            "Vitamin D 35 ng/mL"
+                        ],
+                        "notes": "Worsening fatigue, medication reconciliation needed"
+                    }
+                ],
+                "medicationTimeline": [
+                    {
+                        "medication": "Methotrexate",
+                        "startDate": "2015-08-10",
+                        "endDate": "2023-07-01",
+                        "dose": "10mg weekly",
+                        "reason": "RA treatment"
+                    },
+                    {
+                        "medication": "Tofacitinib",
+                        "startDate": "2023-08-01",
+                        "dose": "5mg BID",
+                        "reason": "RA - inadequate MTX response"
+                    },
+                    {
+                        "medication": "Methotrexate",
+                        "startDate": "2025-09-05",
+                        "dose": "15mg weekly",
+                        "reason": "RA - reintroduced at higher dose"
+                    }
+                ]
+            }
+        },
+        "createdAt": "2025-10-14T16:47:56.098Z",
+        "updatedAt": "2025-10-14T16:47:56.098Z"
+    },
+    {
+        "id": "dashboard-item-1759906219477-adverse-event-analytics",
+        "type": "component",
+        "x": 100,
+        "y": 900,
+        "width": 1600,
+        "height": 500,
+        "componentType": "AdverseEventAnalytics",
+        "description": "",
+        "content": {
+            "title": "Adverse Event Analytics",
+            "component": "AdverseEventAnalytics",
+            "props": {
+                "patientData": {
+                    "riskAssessment": {
+                        "level": "high",
+                        "probability": "80%",
+                        "primaryConcern": "Drug-Induced Liver Injury (DILI)",
+                        "keyRiskFactors": [
+                            "Methotrexate 15mg weekly reintroduction",
+                            "Turmeric supplement use (October 2024)",
+                            "Absence of LFT monitoring after February 2025",
+                            "Worsening chronic fatigue",
+                            "Metabolic risk factors (obesity, HTN, hyperlipidemia, T2DM)"
+                        ],
+                        "timeline": {
+                            "riskPeriodStart": "2024-10-01",
+                            "lastLFTMonitoring": "2025-02-28",
+                            "symptomOnset": "2024-12-01",
+                            "currentDate": "2026-07-10"
+                        }
+                    },
+                    "adverseEvents": [
+                        {
+                            "type": "Hepatotoxicity Risk",
+                            "severity": "High",
+                            "onset": "2025-09-05",
+                            "medication": "Methotrexate",
+                            "description": "High risk for liver injury due to MTX reintroduction without adequate monitoring"
+                        },
+                        {
+                            "type": "Drug Interaction",
+                            "severity": "Medium",
+                            "onset": "2024-10-01",
+                            "medication": "Turmeric + Methotrexate",
+                            "description": "Potential synergistic hepatotoxic effects"
+                        }
+                    ]
+                }
+            }
+        },
+        "createdAt": "2025-10-14T16:50:19.477Z",
+        "updatedAt": "2025-10-14T16:50:19.477Z"
+    },
+    {
+        "id": "dashboard-item-1759906246155-lab-table",
+        "type": "component",
+        "x": 100,
+        "y": 1450,
+        "width": 520,
+        "height": 400,
+        "componentType": "LabTable",
+        "description": "",
+        "content": {
+            "title": "Lab Findings",
+            "component": "LabTable",
+            "props": {
+                "encounters": [
+                    {
+                        "date": "2024-10-20",
+                        "labs": {
+                            "CRP": "28 mg/L",
+                            "ESR": "38 mm/hr",
+                            "status": "Elevated - RA flare"
+                        }
+                    },
+                    {
+                        "date": "2025-02-15",
+                        "labs": {
+                            "CRP": "4.5 mg/L",
+                            "ESR": "28 mm/hr",
+                            "status": "Improved"
+                        }
+                    },
+                    {
+                        "date": "2025-09-05",
+                        "labs": {
+                            "Glucose": "98 mg/dL",
+                            "LDL": "110 mg/dL",
+                            "status": "Borderline elevated LDL"
+                        }
+                    },
+                    {
+                        "date": "2026-04-15",
+                        "labs": {
+                            "TSH": "2.1 mIU/L",
+                            "Vitamin D": "35 ng/mL",
+                            "Hemoglobin": "12.8 g/dL",
+                            "status": "Within normal limits"
+                        }
+                    }
+                ],
+                "criticalGaps": [
+                    {
+                        "test": "Liver Function Tests",
+                        "lastDate": "2025-02-28",
+                        "daysSince": 497,
+                        "urgency": "Critical"
+                    }
+                ]
+            }
+        },
+        "createdAt": "2025-10-14T16:50:46.155Z",
+        "updatedAt": "2025-10-14T16:50:46.155Z"
+    },
+    {
+        "id": "dashboard-item-1759906246156-lab-chart",
+        "type": "component",
+        "x": 670,
+        "y": 1450,
+        "width": 520,
+        "height": 400,
+        "componentType": "LabChart",
+        "description": "",
+        "content": {
+            "title": "Lab Trends",
+            "component": "LabChart",
+            "props": {
+                "encounters": [
+                    {
+                        "date": "2024-10-20",
+                        "CRP": 28,
+                        "ESR": 38
+                    },
+                    {
+                        "date": "2025-02-15",
+                        "CRP": 4.5,
+                        "ESR": 28
+                    }
+                ],
+                "medicationTimeline": [
+                    {
+                        "medication": "Tofacitinib",
+                        "startDate": "2023-08-01",
+                        "dose": "5mg BID"
+                    },
+                    {
+                        "medication": "Methotrexate",
+                        "startDate": "2025-09-05",
+                        "dose": "15mg weekly"
+                    }
+                ],
+                "chartConfig": {
+                    "primaryMetrics": [
+                        "CRP",
+                        "ESR"
+                    ],
+                    "timeRange": "24months",
+                    "showMedicationOverlay": true
+                }
+            }
+        },
+        "createdAt": "2025-10-14T16:50:46.156Z",
+        "updatedAt": "2025-10-14T16:50:46.156Z"
+    },
+    {
+        "id": "dashboard-item-1759906246157-differential-diagnosis",
+        "type": "component",
+        "x": 1240,
+        "y": 1450,
+        "width": 520,
+        "height": 400,
+        "componentType": "DifferentialDiagnosis",
+        "description": "",
+        "content": {
+            "title": "Differential Diagnosis",
+            "component": "DifferentialDiagnosis",
+            "props": {
+                "patientData": {
+                    "primaryDiagnoses": [
+                        {
+                            "diagnosis": "Drug-Induced Liver Injury (DILI)",
+                            "probability": "80%",
+                            "evidence": [
+                                "Methotrexate reintroduction",
+                                "Turmeric supplement use",
+                                "Worsening fatigue",
+                                "Absence of LFT monitoring"
+                            ],
+                            "urgency": "High"
+                        },
+                        {
+                            "diagnosis": "NAFLD/MASLD",
+                            "probability": "65%",
+                            "evidence": [
+                                "Class I obesity (BMI 27-29.8)",
+                                "Type 2 Diabetes Mellitus",
+                                "Hypertension",
+                                "Hyperlipidemia"
+                            ],
+                            "urgency": "Medium"
+                        },
+                        {
+                            "diagnosis": "Autoimmune Hepatitis",
+                            "probability": "30%",
+                            "evidence": [
+                                "RA (autoimmune condition)",
+                                "Chronic fatigue"
+                            ],
+                            "urgency": "Medium",
+                            "workupNeeded": "ANA, ASMA, LKM-1"
+                        }
+                    ],
+                    "excludedDiagnoses": [
+                        {
+                            "diagnosis": "Viral Hepatitis",
+                            "reason": "Workup needed",
+                            "tests": "Hepatitis A, B, C serologies"
+                        }
+                    ],
+                    "nextSteps": [
+                        "Urgent LFT panel (ALT, AST, ALP, GGT, Bilirubin, Albumin, INR)",
+                        "Hepatitis serologies",
+                        "Autoimmune markers",
+                        "Hepatology referral"
+                    ]
+                }
+            }
+        },
+        "createdAt": "2025-10-14T16:50:46.157Z",
+        "updatedAt": "2025-10-14T16:50:46.157Z"
+    },
+    {
+        "id": "item-1759853783245-we4jxb",
+        "type": "agent",
+        "x": 400,
+        "y": 200,
+        "width": 520,
+        "height": 1571,
+        "content": "\n## Identifiers\n\n* **Name:** Sarah Miller\n* **Age:** 43\n* **DOB:** October 15, 1980\n* **Sex:** Female\n* **Marital Status:** Married\n* **Address:** 123 Maple Drive, Anytown, USA\n* **Occupation:** Senior accountant\n* **Primary Language:** English\n* **Phone:** (555) 123-4567\n\n## Lifestyle\n\n* **Activity:** Moderately active but constrained by condition\n* **Exercise:** Gentle stretching and short walks a few times a week\n* **Tobacco:** Non-smoker\n* **Alcohol:** Occasional (typically one glass of wine during social gatherings)\n* **Diet:** Generally balanced, whole foods; occasional comfort eating with increased pain or fatigue\n* **Sleep:** Frequently disrupted due to discomfort → chronic fatigue\n* **Limitations:** Persistent joint pain and stiffness, especially mornings\n\n## Medical History\n\n* **Primary condition:** Severe polyarticular rheumatoid arthritis (RA), diagnosed in early thirties\n* **Initial presentation:** Symmetrical pain and swelling in hands, wrists, and feet → later knees and shoulders\n* **Early treatments:**\n\n  * Hydroxychloroquine **200 mg daily**\n  * Sulfasalazine **500 mg twice daily**\n    *Outcome:* Moderate relief; did not fully control inflammation\n* **Past 5 years:** High disease activity with joint erosion and persistent synovitis → transitioned to **Tofacitinib (Xeljanz) 5 mg twice daily**\n  *Outcome:* Significant reduction in joint pain and swelling; **morning stiffness 1–2 hours** and **generalized fatigue** persist\n* **Dermatologic symptoms:** Intermittent red, scaly skin patches on elbows and knees → managed with **topical desoximetasone cream 0.25% once daily**\n* **Other major conditions:** None reported\n* **Current status:** Managed but daily challenges related to RA\n\n## Medications\n\n* **Current:**\n\n  * **Tofacitinib (Xeljanz) 5 mg twice daily**\n  * **Desoximetasone cream 0.25%** to skin lesions **once daily**\n  * **Ibuprofen 400 mg as needed** for breakthrough pain\n* **Past (discontinued for inadequate control):**\n\n  * **Hydroxychloroquine 200 mg daily**\n  * **Sulfasalazine 500 mg twice daily**\n\n## Allergies\n\n* **Penicillin:** Generalized rash\n* **Food allergies:** None known\n\n## Family History\n\n* **Mother:** Hypothyroidism (diagnosed at 55)\n* **Maternal grandmother:** Severe osteoarthritis\n* **Father:** Well-controlled hypertension; Type 2 diabetes mellitus (diagnosed in late 60s)\n* **Sibling:** One younger brother, healthy\n",
+        "color": "#ffffff",
+        "rotation": 0,
+        "agentData": {
+            "title": "Patient Profile",
+            "markdown": "\n## Identifiers\n\n* **Name:** Sarah Miller\n* **Age:** 43\n* **DOB:** October 15, 1980\n* **Sex:** Female\n* **Marital Status:** Married\n* **Address:** 123 Maple Drive, Anytown, USA\n* **Occupation:** Senior accountant\n* **Primary Language:** English\n* **Phone:** (555) 123-4567\n\n## Lifestyle\n\n* **Activity:** Moderately active but constrained by condition\n* **Exercise:** Gentle stretching and short walks a few times a week\n* **Tobacco:** Non-smoker\n* **Alcohol:** Occasional (typically one glass of wine during social gatherings)\n* **Diet:** Generally balanced, whole foods; occasional comfort eating with increased pain or fatigue\n* **Sleep:** Frequently disrupted due to discomfort → chronic fatigue\n* **Limitations:** Persistent joint pain and stiffness, especially mornings\n\n## Medical History\n\n* **Primary condition:** Severe polyarticular rheumatoid arthritis (RA), diagnosed in early thirties\n* **Initial presentation:** Symmetrical pain and swelling in hands, wrists, and feet → later knees and shoulders\n* **Early treatments:**\n\n  * Hydroxychloroquine **200 mg daily**\n  * Sulfasalazine **500 mg twice daily**\n    *Outcome:* Moderate relief; did not fully control inflammation\n* **Past 5 years:** High disease activity with joint erosion and persistent synovitis → transitioned to **Tofacitinib (Xeljanz) 5 mg twice daily**\n  *Outcome:* Significant reduction in joint pain and swelling; **morning stiffness 1–2 hours** and **generalized fatigue** persist\n* **Dermatologic symptoms:** Intermittent red, scaly skin patches on elbows and knees → managed with **topical desoximetasone cream 0.25% once daily**\n* **Other major conditions:** None reported\n* **Current status:** Managed but daily challenges related to RA\n\n## Medications\n\n* **Current:**\n\n  * **Tofacitinib (Xeljanz) 5 mg twice daily**\n  * **Desoximetasone cream 0.25%** to skin lesions **once daily**\n  * **Ibuprofen 400 mg as needed** for breakthrough pain\n* **Past (discontinued for inadequate control):**\n\n  * **Hydroxychloroquine 200 mg daily**\n  * **Sulfasalazine 500 mg twice daily**\n\n## Allergies\n\n* **Penicillin:** Generalized rash\n* **Food allergies:** None known\n\n## Family History\n\n* **Mother:** Hypothyroidism (diagnosed at 55)\n* **Maternal grandmother:** Severe osteoarthritis\n* **Father:** Well-controlled hypertension; Type 2 diabetes mellitus (diagnosed in late 60s)\n* **Sibling:** One younger brother, healthy\n"
+        },
+        "createdAt": "2025-10-07T16:16:23.245Z",
+        "updatedAt": "2025-10-09T06:31:57.101Z"
+    },
+    {
+        "id": "item-1759906076097-tkktws",
+        "type": "agent",
+        "x": 110,
+        "y": 320,
+        "width": 520,
+        "height": 1142,
+        "content": "\n# Risk Level: high\n\n# Reasoning: \nThe patient is at high risk for undiagnosed or progressing liver injury due to a critical and sustained absence of liver function test (LFT) monitoring after February 2025, precisely when exposed to multiple highly hepatotoxic agents. Key exposures include Methotrexate (15mg weekly, re-introduced despite prior GI intolerance and inconsistent Folic Acid intake) and turmeric supplements (reported in October 2024), both known causes of Drug-Induced Liver Injury (DILI). The patient's debilitating fatigue has been worsening and intensifying from late 2024 into 2026, temporally aligning with these exposures and the lack of monitoring, suggesting potential undetected liver dysfunction. Furthermore, significant metabolic risk factors such as Class I obesity, hypertension, hyperlipidemia, and newly diagnosed Type 2 Diabetes Mellitus predispose the patient to Non-alcoholic Fatty Liver Disease (NAFLD)/Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD), which increases susceptibility to DILI. The absence of viral serologies and autoimmune markers leaves alternative liver conditions unexcluded.\n\n# Evidence: \n- Critical and sustained data gap in liver function test (LFT) monitoring after February 2025, despite introduction of high-risk medications.\n- Re-introduction of Methotrexate (MTX) 15mg weekly around September 2025, despite prior gastrointestinal intolerance to the drug and inconsistent Folic Acid intake.\n- Patient reported using turmeric supplements in October 2024, an agent with emerging high hepatotoxic potential.\n- Debilitating chronic fatigue, described as worsening and intensifying from late 2024/early 2025 into 2026, temporally aligns with high-risk drug exposures and cessation of LFT monitoring.\n- Patient has significant metabolic risk factors for NAFLD/MASLD including Class I obesity (BMI 27-29.8 kg/m²), hypertension, hyperlipidemia, and newly diagnosed Type 2 Diabetes Mellitus (February 2026).\n- Specific serologies for Hepatitis A, B, and C and autoimmune markers (ANA, ASMA, LKM-1) were not provided, leaving alternative diagnoses unexcluded.\n\n# Probability: 80%\n# Probability Reasoning: \nThe patient is at high risk due to the re-introduction of Methotrexate and turmeric use, both known hepatotoxins, coinciding with worsening debilitating fatigue and a critical absence of liver function test (LFT) monitoring after February 2025. Significant metabolic risk factors for NAFLD/MASLD further increase DILI susceptibility, creating a strong likelihood of undiagnosed or progressing liver injury.",
+        "color": "#ffffff",
+        "rotation": 0,
+        "agentData": {
+            "title": "Patient Risk Notification",
+            "markdown": "\n# Risk Level: high\n\n# Reasoning: \nThe patient is at high risk for undiagnosed or progressing liver injury due to a critical and sustained absence of liver function test (LFT) monitoring after February 2025, precisely when exposed to multiple highly hepatotoxic agents. Key exposures include Methotrexate (15mg weekly, re-introduced despite prior GI intolerance and inconsistent Folic Acid intake) and turmeric supplements (reported in October 2024), both known causes of Drug-Induced Liver Injury (DILI). The patient's debilitating fatigue has been worsening and intensifying from late 2024 into 2026, temporally aligning with these exposures and the lack of monitoring, suggesting potential undetected liver dysfunction. Furthermore, significant metabolic risk factors such as Class I obesity, hypertension, hyperlipidemia, and newly diagnosed Type 2 Diabetes Mellitus predispose the patient to Non-alcoholic Fatty Liver Disease (NAFLD)/Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD), which increases susceptibility to DILI. The absence of viral serologies and autoimmune markers leaves alternative liver conditions unexcluded.\n\n# Evidence: \n- Critical and sustained data gap in liver function test (LFT) monitoring after February 2025, despite introduction of high-risk medications.\n- Re-introduction of Methotrexate (MTX) 15mg weekly around September 2025, despite prior gastrointestinal intolerance to the drug and inconsistent Folic Acid intake.\n- Patient reported using turmeric supplements in October 2024, an agent with emerging high hepatotoxic potential.\n- Debilitating chronic fatigue, described as worsening and intensifying from late 2024/early 2025 into 2026, temporally aligns with high-risk drug exposures and cessation of LFT monitoring.\n- Patient has significant metabolic risk factors for NAFLD/MASLD including Class I obesity (BMI 27-29.8 kg/m²), hypertension, hyperlipidemia, and newly diagnosed Type 2 Diabetes Mellitus (February 2026).\n- Specific serologies for Hepatitis A, B, and C and autoimmune markers (ANA, ASMA, LKM-1) were not provided, leaving alternative diagnoses unexcluded.\n\n# Probability: 80%\n# Probability Reasoning: \nThe patient is at high risk due to the re-introduction of Methotrexate and turmeric use, both known hepatotoxins, coinciding with worsening debilitating fatigue and a critical absence of liver function test (LFT) monitoring after February 2025. Significant metabolic risk factors for NAFLD/MASLD further increase DILI susceptibility, creating a strong likelihood of undiagnosed or progressing liver injury."
+        },
+        "createdAt": "2025-10-08T06:47:56.098Z",
+        "updatedAt": "2025-10-09T06:31:27.259Z"
+    },
+    {
+        "id": "item-1759906219477-i2fjcb",
+        "type": "todo",
+        "x": 410,
+        "y": 220,
+        "width": 420,
+        "height": 433,
+        "content": "Todo List",
+        "color": "#ffffff",
+        "rotation": 0,
+        "todoData": {
+            "title": "Review Patient Data and Explain Risk Notification",
+            "description": "Comprehensive review of Sarah Miller's patient data, followed by a detailed explanation of the risk notification concerning potential liver injury.",
+            "todos": [
+                {
+                    "text": "1. Access and review all EHR data for Sarah Miller across different encounters and specialties.",
+                    "status": "todo"
+                },
+                {
+                    "text": "2. Summarize key findings from each EHR record, including diagnoses, medications, lab results, and imaging reports.",
+                    "status": "todo"
+                },
+                {
+                    "text": "3. Analyze the Patient Risk Notification regarding potential liver injury, paying close attention to the reasoning and evidence provided.",
+                    "status": "todo"
+                },
+                {
+                    "text": "4. Prepare a concise explanation of the risk notification for discussion with relevant healthcare providers.",
+                    "status": "todo"
+                },
+                {
+                    "text": "5. Document the review process and key discussion points.",
+                    "status": "todo"
+                }
+            ]
+        },
+        "createdAt": "2025-10-08T06:50:19.477Z",
+        "updatedAt": "2025-10-08T06:50:19.733Z"
+    },
+    {
+        "id": "item-1759906246155-xf1xaf",
+        "type": "agent",
+        "x": 210,
+        "y": 220,
+        "width": 520,
+        "height": 3840,
+        "content": " \n## Review of Patient Data and Explanation of Risk Notification for Sarah Miller (DOB: 1980-10-15)\n\n### 1. EHR Data Review Across Encounters and Specialties\n\n*   **Timeframe:** 2015-08-10 to 2026-07-10\n\n### 2. Summary of Key Findings from EHR Records\n\n*   **Diagnoses:**\n    *   Rheumatoid Arthritis (RA), seropositive, diagnosed in 2010, with exacerbations and periods of stability. (enc-2015-08-10-001, EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01, EHR-MC-001001-20250905-01)\n    *   Psoriasis, newly diagnosed in 2025. (EHR-MC-001001-20250410-01, EHR-MC-001001-20250125-01)\n    *   Hypertension (HTN), controlled with Lisinopril. (EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Hyperlipidemia, managed with Atorvastatin. (EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01)\n    *   GERD, managed with Omeprazole. (EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260710-01)\n    *   Chronic Fatigue, significant impact on quality of life. (EHR-MC-001001-20250410-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Right wrist sprain/contusion after a fall (2026-02-18), resolved by 2026-03-20. (EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01)\n    *   Osteoporosis, mild (EHR-MC-001001-20260320-01)\n    *   Type 2 Diabetes Mellitus, well-controlled, A1c 6.8 last known (EHR-MC-001001-20260218-01)\n*   **Medications:**\n    *   Tofacitinib (Xeljanz) 5mg BID (started 2023-08) for RA. (EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01)\n    *   Methotrexate (MTX):\n        *   10mg weekly (Started 2015-08-10, route unspecified). (enc-2015-08-10-001, enc-2016-02-20-002)\n        *   15mg weekly (route unspecified) (EHR-MC-001001-20250905-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01).\n    *   Folic Acid 1mg daily or 5mg weekly. (enc-2015-08-10-001, enc-2016-02-20-002, EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20250905-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Hydroxychloroquine 200mg BID (EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01). Patient sometimes inconsistent with BID dosing (EHR-MC-001001-20260320-01).\n    *   Lisinopril 10mg daily for HTN. (EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Atorvastatin 20mg nightly for hyperlipidemia. (EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01)\n    *   Omeprazole 20mg daily for GERD. (EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260710-01)\n    *   Desoximetasone 0.25% cream PRN for psoriasis. (EHR-MC-001001-20250125-01, EHR-MC-001001-20250410-01)\n    *   Ibuprofen PRN for pain. (enc-2015-08-10-001, EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Vitamin D 2000 IU daily. (EHR-MC-001001-20250905-01, EHR-MC-001001-20260710-01).  Medication reconciliation incomplete, dose needs verification (EHR-MC-001001-20260710-01).\n    *   Calcium 600 mg + Vitamin D 400 IU PO BID (EHR-MC-001001-20260320-01)\n    *   Humira 40mg SC every other week (last dose unclear) (EHR-MC-001001-20260218-01)\n*   **Allergies:**\n    *   Penicillin (rash). (EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20250905-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Sulfa (hives). (EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20250905-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260710-01)\n    *   Codeine (nausea) (EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01)\n*   **Lab Results:**\n    *   LFTs ordered 2015-08-10 (enc-2015-08-10-001), 2016-02-20 (enc-2016-02-20-002), and 2024-10-20 (EHR-MC-001001-20241020-01).\n    *   CRP and ESR elevated during RA flare in 2024-10 (CRP 28 mg/L, ESR 38 mm/hr) (EHR-MC-001001-20241020-01).\n    *    2025-02-15: CRP 4.5 mg/L, ESR 28 mm/hr (EHR-MC-001001-20250410-01)\n    *   TSH and Vitamin D within normal limits as of 2026-04-15 (TSH 2.1 mIU/L, Vitamin D 35 ng/mL) (EHR-MC-001001-20260710-01).\n    *   Glucose WNL 2025-09-05 (98 mg/dL) (EHR-MC-001001-20250905-01).\n    *   Lipid panel 2025-09-05 showed borderline elevated LDL (110 mg/dL) but improved from prior year (EHR-MC-001001-20250905-01). Prior LDL was 125 mg/dL (EHR-MC-001001-20250905-01).\n    *   Hemoglobin 12.8 g/dL (historical value) (EHR-MC-001001-20260320-01).\n*   **Imaging:**\n    *   Chest X-ray ordered 2015-08-10 (enc-2015-08-10-001).  Results not provided.\n    *   X-rays of hands/feet 2024-10-20 showed no new erosions or significant joint space narrowing compared to prior studies from 2023-06. Stable disease. (EHR-MC-001001-20241020-01)\n    *   Right wrist X-ray 2026-02-18 showed no acute fracture or dislocation. Mild soft tissue swelling. Degenerative changes consistent with age and known RA. (EHR-MC-001001-20260218-01)\n\n### 3. Analysis of Patient Risk Notification Regarding Potential Liver Injury\n\n*   **Risk Level:** High\n*   **Reasoning:** The patient is at high risk for undiagnosed or progressing liver injury due to a critical and sustained absence of liver function test (LFT) monitoring after February 2025, precisely when exposed to multiple highly hepatotoxic agents. Key exposures include Methotrexate (15mg weekly, re-introduced despite prior GI intolerance and inconsistent Folic Acid intake) and potential turmeric supplements (reported in October 2024), both known causes of Drug-Induced Liver Injury (DILI). The patient's debilitating fatigue has been worsening and intensifying from late 2024 into 2026, temporally aligning with these exposures and the lack of monitoring, suggesting potential undetected liver dysfunction. Furthermore, significant metabolic risk factors such as Class I obesity, hypertension, hyperlipidemia, and newly diagnosed Type 2 Diabetes Mellitus predispose the patient to Non-alcoholic Fatty Liver Disease (NAFLD)/Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD), which increases susceptibility to DILI. The absence of viral serologies and autoimmune markers leaves alternative liver conditions unexcluded.\n*   **Evidence:**\n    *   Critical and sustained data gap in liver function test (LFT) monitoring after February 2025, despite introduction of high-risk medications.\n    *   Re-introduction of Methotrexate (MTX) 15mg weekly around September 2025, despite prior gastrointestinal intolerance to the drug and inconsistent Folic Acid intake.\n    *   Patient reported using turmeric supplements in October 2024, an agent with emerging high hepatotoxic potential.\n    *   Debilitating chronic fatigue, described as worsening and intensifying from late 2024/early 2025 into 2026, temporally aligns with high-risk drug exposures and cessation of LFT monitoring.\n    *   Patient has significant metabolic risk factors for NAFLD/MASLD including Class I obesity (BMI 27-29.8 kg/m²), hypertension, hyperlipidemia, and newly diagnosed Type 2 Diabetes Mellitus (February 2026).\n    *   Specific serologies for Hepatitis A, B, and C and autoimmune markers (ANA, ASMA, LKM-1) were not provided, leaving alternative diagnoses unexcluded.\n*   **Probability:** 80%\n\n### 4. Concise Explanation of the Risk Notification for Discussion with Healthcare Providers\n\n*   **Summary:** Sarah Miller is at high risk for liver injury due to potential DILI or underlying NAFLD/MASLD.\n*   **Key Concerns:**\n    *   **Lack of LFT Monitoring:** No documented LFTs after February 2025, despite ongoing use of potentially hepatotoxic medications.\n    *   **Methotrexate Use:** MTX is hepatotoxic, and its use in the setting of possible non-adherence to folic acid increases risk. MTX was restarted despite potential prior intolerance.\n    *   **Turmeric Supplement:** Potential hepatotoxicity.\n    *   **Worsening Fatigue:** Could be a sign of liver dysfunction.\n    *   **Metabolic Risk Factors:** Obesity, HTN, hyperlipidemia, and T2DM increase risk of NAFLD/MASLD, predisposing to DILI.\n*   **Missing Information:** Hepatitis A, B, C serologies and autoimmune markers (ANA, ASMA, LKM-1)\n\n### 5. Documentation of Review Process and Key Discussion Points\n\n*   **Review Process:** Comprehensive review of EHR data from 2015-08-10 to 2026-07-10.\n*   **Key Discussion Points:**\n    *   The need for immediate LFTs.\n    *   The potential need for discontinuation or dose adjustment of MTX if LFTs are elevated.\n    *   The importance of adherence to folic acid supplementation with MTX.\n    *   The need to investigate the use of turmeric supplements further.\n    *   The importance of ruling out other causes of liver disease (viral hepatitis, autoimmune hepatitis).\n    *   The need to address metabolic risk factors (weight loss, blood pressure control, lipid management, diabetes management).\n    *   The significance of patient's report of worsening fatigue.\n\n### Next Actions\n\n*   **Urgent:** Order comprehensive LFT panel (ALT, AST, ALP, GGT, Total/Direct Bilirubin, Albumin, INR, Platelet Count) (**Urgent**)\n    *Rationale:* To assess current liver function due to risk factors and lack of recent monitoring.\n*   **Soon:** Check Hepatitis A, B, C serologies, ANA, ASMA, LKM-1. (**Soon**)\n    *Rationale:* Rule out other causes of liver disease.\n*   **Soon:** Medication Review and Reconciliation (**Soon**)\n    *Rationale:* Clarify MTX dose and route, folic acid adherence, and concurrent medications.\n*   **Soon:** Refer to Hepatology (**Soon**)\n    *Rationale:* For further evaluation and management of potential liver injury, including possible liver biopsy. Include all EHR data, including medication list, lab results, and imaging reports. Specifically highlight the lack of LFT monitoring, MTX use, potential turmeric use, and metabolic risk factors.\n",
+        "color": "#ffffff",
+        "rotation": 0,
+        "agentData": {
+            "title": "Review patient data and explain risk notification",
+            "markdown": " \n## Review of Patient Data and Explanation of Risk Notification for Sarah Miller (DOB: 1980-10-15)\n\n### 1. EHR Data Review Across Encounters and Specialties\n\n*   **Timeframe:** 2015-08-10 to 2026-07-10\n\n### 2. Summary of Key Findings from EHR Records\n\n*   **Diagnoses:**\n    *   Rheumatoid Arthritis (RA), seropositive, diagnosed in 2010, with exacerbations and periods of stability. (enc-2015-08-10-001, EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01, EHR-MC-001001-20250905-01)\n    *   Psoriasis, newly diagnosed in 2025. (EHR-MC-001001-20250410-01, EHR-MC-001001-20250125-01)\n    *   Hypertension (HTN), controlled with Lisinopril. (EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Hyperlipidemia, managed with Atorvastatin. (EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01)\n    *   GERD, managed with Omeprazole. (EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260710-01)\n    *   Chronic Fatigue, significant impact on quality of life. (EHR-MC-001001-20250410-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Right wrist sprain/contusion after a fall (2026-02-18), resolved by 2026-03-20. (EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01)\n    *   Osteoporosis, mild (EHR-MC-001001-20260320-01)\n    *   Type 2 Diabetes Mellitus, well-controlled, A1c 6.8 last known (EHR-MC-001001-20260218-01)\n*   **Medications:**\n    *   Tofacitinib (Xeljanz) 5mg BID (started 2023-08) for RA. (EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01)\n    *   Methotrexate (MTX):\n        *   10mg weekly (Started 2015-08-10, route unspecified). (enc-2015-08-10-001, enc-2016-02-20-002)\n        *   15mg weekly (route unspecified) (EHR-MC-001001-20250905-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01).\n    *   Folic Acid 1mg daily or 5mg weekly. (enc-2015-08-10-001, enc-2016-02-20-002, EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20250905-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Hydroxychloroquine 200mg BID (EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01). Patient sometimes inconsistent with BID dosing (EHR-MC-001001-20260320-01).\n    *   Lisinopril 10mg daily for HTN. (EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Atorvastatin 20mg nightly for hyperlipidemia. (EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01)\n    *   Omeprazole 20mg daily for GERD. (EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260710-01)\n    *   Desoximetasone 0.25% cream PRN for psoriasis. (EHR-MC-001001-20250125-01, EHR-MC-001001-20250410-01)\n    *   Ibuprofen PRN for pain. (enc-2015-08-10-001, EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Vitamin D 2000 IU daily. (EHR-MC-001001-20250905-01, EHR-MC-001001-20260710-01).  Medication reconciliation incomplete, dose needs verification (EHR-MC-001001-20260710-01).\n    *   Calcium 600 mg + Vitamin D 400 IU PO BID (EHR-MC-001001-20260320-01)\n    *   Humira 40mg SC every other week (last dose unclear) (EHR-MC-001001-20260218-01)\n*   **Allergies:**\n    *   Penicillin (rash). (EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20250905-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260320-01, EHR-MC-001001-20260710-01)\n    *   Sulfa (hives). (EHR-MC-001001-20241020-01, EHR-MC-001001-20250410-01, EHR-MC-001001-20250905-01, EHR-MC-001001-20260218-01, EHR-MC-001001-20260710-01)\n    *   Codeine (nausea) (EHR-MC-001001-20241020-01, EHR-MC-001001-20260218-01)\n*   **Lab Results:**\n    *   LFTs ordered 2015-08-10 (enc-2015-08-10-001), 2016-02-20 (enc-2016-02-20-002), and 2024-10-20 (EHR-MC-001001-20241020-01).\n    *   CRP and ESR elevated during RA flare in 2024-10 (CRP 28 mg/L, ESR 38 mm/hr) (EHR-MC-001001-20241020-01).\n    *    2025-02-15: CRP 4.5 mg/L, ESR 28 mm/hr (EHR-MC-001001-20250410-01)\n    *   TSH and Vitamin D within normal limits as of 2026-04-15 (TSH 2.1 mIU/L, Vitamin D 35 ng/mL) (EHR-MC-001001-20260710-01).\n    *   Glucose WNL 2025-09-05 (98 mg/dL) (EHR-MC-001001-20250905-01).\n    *   Lipid panel 2025-09-05 showed borderline elevated LDL (110 mg/dL) but improved from prior year (EHR-MC-001001-20250905-01). Prior LDL was 125 mg/dL (EHR-MC-001001-20250905-01).\n    *   Hemoglobin 12.8 g/dL (historical value) (EHR-MC-001001-20260320-01).\n*   **Imaging:**\n    *   Chest X-ray ordered 2015-08-10 (enc-2015-08-10-001).  Results not provided.\n    *   X-rays of hands/feet 2024-10-20 showed no new erosions or significant joint space narrowing compared to prior studies from 2023-06. Stable disease. (EHR-MC-001001-20241020-01)\n    *   Right wrist X-ray 2026-02-18 showed no acute fracture or dislocation. Mild soft tissue swelling. Degenerative changes consistent with age and known RA. (EHR-MC-001001-20260218-01)\n\n### 3. Analysis of Patient Risk Notification Regarding Potential Liver Injury\n\n*   **Risk Level:** High\n*   **Reasoning:** The patient is at high risk for undiagnosed or progressing liver injury due to a critical and sustained absence of liver function test (LFT) monitoring after February 2025, precisely when exposed to multiple highly hepatotoxic agents. Key exposures include Methotrexate (15mg weekly, re-introduced despite prior GI intolerance and inconsistent Folic Acid intake) and potential turmeric supplements (reported in October 2024), both known causes of Drug-Induced Liver Injury (DILI). The patient's debilitating fatigue has been worsening and intensifying from late 2024 into 2026, temporally aligning with these exposures and the lack of monitoring, suggesting potential undetected liver dysfunction. Furthermore, significant metabolic risk factors such as Class I obesity, hypertension, hyperlipidemia, and newly diagnosed Type 2 Diabetes Mellitus predispose the patient to Non-alcoholic Fatty Liver Disease (NAFLD)/Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD), which increases susceptibility to DILI. The absence of viral serologies and autoimmune markers leaves alternative liver conditions unexcluded.\n*   **Evidence:**\n    *   Critical and sustained data gap in liver function test (LFT) monitoring after February 2025, despite introduction of high-risk medications.\n    *   Re-introduction of Methotrexate (MTX) 15mg weekly around September 2025, despite prior gastrointestinal intolerance to the drug and inconsistent Folic Acid intake.\n    *   Patient reported using turmeric supplements in October 2024, an agent with emerging high hepatotoxic potential.\n    *   Debilitating chronic fatigue, described as worsening and intensifying from late 2024/early 2025 into 2026, temporally aligns with high-risk drug exposures and cessation of LFT monitoring.\n    *   Patient has significant metabolic risk factors for NAFLD/MASLD including Class I obesity (BMI 27-29.8 kg/m²), hypertension, hyperlipidemia, and newly diagnosed Type 2 Diabetes Mellitus (February 2026).\n    *   Specific serologies for Hepatitis A, B, and C and autoimmune markers (ANA, ASMA, LKM-1) were not provided, leaving alternative diagnoses unexcluded.\n*   **Probability:** 80%\n\n### 4. Concise Explanation of the Risk Notification for Discussion with Healthcare Providers\n\n*   **Summary:** Sarah Miller is at high risk for liver injury due to potential DILI or underlying NAFLD/MASLD.\n*   **Key Concerns:**\n    *   **Lack of LFT Monitoring:** No documented LFTs after February 2025, despite ongoing use of potentially hepatotoxic medications.\n    *   **Methotrexate Use:** MTX is hepatotoxic, and its use in the setting of possible non-adherence to folic acid increases risk. MTX was restarted despite potential prior intolerance.\n    *   **Turmeric Supplement:** Potential hepatotoxicity.\n    *   **Worsening Fatigue:** Could be a sign of liver dysfunction.\n    *   **Metabolic Risk Factors:** Obesity, HTN, hyperlipidemia, and T2DM increase risk of NAFLD/MASLD, predisposing to DILI.\n*   **Missing Information:** Hepatitis A, B, C serologies and autoimmune markers (ANA, ASMA, LKM-1)\n\n### 5. Documentation of Review Process and Key Discussion Points\n\n*   **Review Process:** Comprehensive review of EHR data from 2015-08-10 to 2026-07-10.\n*   **Key Discussion Points:**\n    *   The need for immediate LFTs.\n    *   The potential need for discontinuation or dose adjustment of MTX if LFTs are elevated.\n    *   The importance of adherence to folic acid supplementation with MTX.\n    *   The need to investigate the use of turmeric supplements further.\n    *   The importance of ruling out other causes of liver disease (viral hepatitis, autoimmune hepatitis).\n    *   The need to address metabolic risk factors (weight loss, blood pressure control, lipid management, diabetes management).\n    *   The significance of patient's report of worsening fatigue.\n\n### Next Actions\n\n*   **Urgent:** Order comprehensive LFT panel (ALT, AST, ALP, GGT, Total/Direct Bilirubin, Albumin, INR, Platelet Count) (**Urgent**)\n    *Rationale:* To assess current liver function due to risk factors and lack of recent monitoring.\n*   **Soon:** Check Hepatitis A, B, C serologies, ANA, ASMA, LKM-1. (**Soon**)\n    *Rationale:* Rule out other causes of liver disease.\n*   **Soon:** Medication Review and Reconciliation (**Soon**)\n    *Rationale:* Clarify MTX dose and route, folic acid adherence, and concurrent medications.\n*   **Soon:** Refer to Hepatology (**Soon**)\n    *Rationale:* For further evaluation and management of potential liver injury, including possible liver biopsy. Include all EHR data, including medication list, lab results, and imaging reports. Specifically highlight the lack of LFT monitoring, MTX use, potential turmeric use, and metabolic risk factors.\n"
+        },
+        "createdAt": "2025-10-08T06:50:46.155Z",
+        "updatedAt": "2025-10-09T06:31:27.260Z"
+    }
+]

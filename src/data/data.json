@@ -1,0 +1,947 @@
+{
+    "patient": {
+        "name": "Sarah Miller",
+        "sex": "Female",
+        "age_at_first_encounter": 53,
+        "identifiers": {
+            "mrn": null
+        }
+    },
+    "problem_list": [
+        {
+            "name": "Rheumatoid arthritis",
+            "status": "active",
+            "codes": [
+                {
+                    "system": "SNOMED",
+                    "code": "69896004",
+                    "display": "Rheumatoid arthritis (disorder)"
+                },
+                {
+                    "system": "ICD-10",
+                    "code": "M05.9",
+                    "display": "Seropositive rheumatoid arthritis, unspecified"
+                }
+            ],
+            "first_recorded": "2015-08-10"
+        },
+        {
+            "name": "Essential hypertension",
+            "status": "active",
+            "codes": [
+                {
+                    "system": "SNOMED",
+                    "code": "383410000",
+                    "display": "Essential hypertension (disorder)"
+                }
+            ],
+            "first_recorded": "2018-09-05"
+        },
+        {
+            "name": "Mild chronic kidney disease",
+            "status": "active",
+            "codes": [
+                {
+                    "system": "SNOMED",
+                    "code": "23643009",
+                    "display": "Mild chronic kidney disease (disorder)"
+                }
+            ],
+            "first_recorded": "2021-03-15"
+        }
+    ],
+    "medication_timeline": [
+        {
+            "name": "Ibuprofen",
+            "dose": "200 mg",
+            "route": "PO",
+            "frequency": "PRN",
+            "start": "2015-01-01",
+            "end": "2015-08-10",
+            "notes": "Occasional OTC use before RA diagnosis"
+        },
+        {
+            "name": "Methotrexate",
+            "dose": "10 mg",
+            "route": "PO",
+            "frequency": "weekly",
+            "start": "2015-08-10",
+            "end": "2018-09-05",
+            "indication": "RA"
+        },
+        {
+            "name": "Folic Acid",
+            "dose": "5 mg",
+            "route": "PO",
+            "frequency": "weekly (24h after MTX)",
+            "start": "2015-08-10"
+        },
+        {
+            "name": "Methotrexate",
+            "dose": "20 mg",
+            "route": "PO",
+            "frequency": "weekly",
+            "start": "2018-09-05",
+            "indication": "RA"
+        },
+        {
+            "name": "Lisinopril",
+            "dose": "10 mg",
+            "route": "PO",
+            "frequency": "daily",
+            "start": "2018-09-05",
+            "indication": "Hypertension"
+        },
+        {
+            "name": "Trimethoprim-Sulfamethoxazole",
+            "dose": "800/160 mg",
+            "route": "PO",
+            "frequency": "BID",
+            "start": "2025-06-15",
+            "end": "2025-06-25",
+            "indication": "Acute bacterial sinusitis"
+        }
+    ],
+    "encounters": [
+        {
+            "encounter_no": 1,
+            "meta": {
+                "visit_type": "Outpatient",
+                "date_time": "2015-08-10T11:00:00",
+                "provider": {
+                    "name": "Dr. Elizabeth Hayes",
+                    "specialty": "Rheumatology (Initial Consult)"
+                },
+                "ui_risk_color": "green"
+            },
+            "reason_for_visit": "Initial rheumatology consult",
+            "chief_complaint": "Bilateral joint pain and swelling.",
+            "hpi": "53-year-old retired carpenter with 6 months progressive symmetrical small-joint pain/swelling (hands/feet), morning stiffness >60 min, fatigue, limited NSAID relief. Worse in mornings, improves with movement. No fever/rash/infection.",
+            "pmh": {
+                "liver": "None",
+                "cirrhosis_complications": "None",
+                "comorbidities": [],
+                "surgical_history": [
+                    "Appendectomy (childhood)"
+                ]
+            },
+            "medications_prior": [
+                {
+                    "name": "Ibuprofen",
+                    "dose": "200 mg",
+                    "route": "PO",
+                    "frequency": "PRN",
+                    "indication": "Joint pain"
+                }
+            ],
+            "allergies": [
+                {
+                    "substance": "None",
+                    "type": "NKDA"
+                }
+            ],
+            "family_history": [
+                {
+                    "relation": "Father",
+                    "conditions": [
+                        "Hypertension",
+                        "Type 2 Diabetes"
+                    ]
+                },
+                {
+                    "relation": "Mother",
+                    "conditions": [
+                        "Osteoarthritis"
+                    ]
+                }
+            ],
+            "social_history": {
+                "alcohol": {
+                    "pattern": "1–2 beers/day",
+                    "units_per_week": "7–14",
+                    "binge": false
+                },
+                "smoking": {
+                    "status": "current",
+                    "packs_per_day": 1,
+                    "pack_years": 35,
+                    "started_age": 18
+                },
+                "ivdu": false,
+                "occupation": "Retired carpenter (exposure to wood dust, solvents)",
+                "travel": "No recent travel",
+                "sexual_history": "Married, monogamous"
+            },
+            "review_of_systems": {
+                "cardio": "No chest pain or palpitations",
+                "respiratory": "No SOB/cough",
+                "gi": "No GI symptoms",
+                "neuro": "No headaches/dizziness",
+                "msk": "Pain 7/10 at worst, morning stiffness >60 min",
+                "derm": "No rashes",
+                "gu": "No urinary symptoms"
+            },
+            "physical_exam": {
+                "general": "Fatigued but comfortable, NAD",
+                "abdomen": "Soft, NT/ND, no organomegaly",
+                "peripheral": "No edema/clubbing",
+                "cns": "Alert and oriented x3",
+                "skin": "No rashes/jaundice",
+                "msk": "Bilateral swelling/tenderness MCPs 2-3, PIPs 2-3, MTPs 2-3; synovitis; reduced grip; ROM limited by pain"
+            },
+            "assessment": {
+                "impression": "Seropositive Rheumatoid Arthritis (active)",
+                "differential": [
+                    "Psoriatic Arthritis",
+                    "Systemic Lupus Erythematosus",
+                    "Crystal Arthropathy (Gout/Pseudogout)"
+                ]
+            },
+            "plan": {
+                "investigations": {
+                    "labs": [
+                        "Rheumatoid Factor (RF)",
+                        "Anti-CCP",
+                        "CBC with differential",
+                        "LFTs (ALT, AST, Alk Phos, Total/Direct Bilirubin)",
+                        "Renal Function (Creatinine, eGFR)",
+                        "ESR",
+                        "CRP",
+                        "HBsAg",
+                        "Anti-HBc total",
+                        "Anti-HCV"
+                    ],
+                    "imaging": []
+                },
+                "management": {
+                    "medications_started": [
+                        {
+                            "name": "Methotrexate",
+                            "dose": "10 mg",
+                            "route": "PO",
+                            "frequency": "weekly"
+                        },
+                        {
+                            "name": "Folic Acid",
+                            "dose": "5 mg",
+                            "route": "PO",
+                            "frequency": "weekly (24h after MTX)"
+                        }
+                    ],
+                    "procedures": [],
+                    "referrals": [
+                        "Rheumatology nurse education on RA & MTX"
+                    ],
+                    "education": [
+                        "Chronic nature of RA and treatment goals",
+                        "MTX side effects (common/rare)",
+                        "Critical: Take Folic Acid",
+                        "Critical: Avoid alcohol on MTX",
+                        "Importance of regular blood tests"
+                    ],
+                    "counseling": [
+                        "Smoking cessation counseling"
+                    ]
+                }
+            },
+            "orders": {
+                "labs": [
+                    "RF",
+                    "Anti-CCP",
+                    "ESR",
+                    "CRP",
+                    "CBC with differential",
+                    "LFTs",
+                    "Creatinine",
+                    "eGFR",
+                    "HBsAg",
+                    "Anti-HBc Total",
+                    "Anti-HCV"
+                ],
+                "imaging": []
+            },
+            "diagnoses": [
+                {
+                    "system": "ICD-10",
+                    "code": "M05.9",
+                    "display": "Seropositive rheumatoid arthritis, unspecified",
+                    "status": "primary"
+                }
+            ],
+            "billing": {
+                "icd10": [
+                    "M05.9"
+                ],
+                "cpt": [
+                    "99204"
+                ]
+            },
+            "follow_up": {
+                "instructions": [
+                    "Return to Rheumatology in 3 months",
+                    "GP monitoring labs every 4 weeks for first 3 months",
+                    "Report fever, severe fatigue, rash, jaundice, or SOB urgently"
+                ]
+            }
+        },
+        {
+            "encounter_no": 2,
+            "meta": {
+                "date_time": "2016-02-20T09:30:00",
+                "visit_type": "Outpatient",
+                "provider": {
+                    "name": null,
+                    "specialty": "General Practice"
+                },
+                "ui_risk_color": "green"
+            },
+            "reason_for_visit": "Routine MTX monitoring and RA review",
+            "hpc_ros": "Good RA control on MTX 10 mg weekly; no MTX side effects; occasional joint aches; adherent to MTX and folic acid; no new concerns.",
+            "medications_prior": [
+                {
+                    "name": "Methotrexate",
+                    "dose": "10 mg",
+                    "route": "PO",
+                    "frequency": "weekly"
+                },
+                {
+                    "name": "Folic Acid",
+                    "dose": "5 mg",
+                    "route": "PO",
+                    "frequency": "weekly"
+                },
+                {
+                    "name": "Paracetamol",
+                    "dose": null,
+                    "route": "PO",
+                    "frequency": "PRN"
+                }
+            ],
+            "alcohol_smoking": {
+                "alcohol": "Weekends only, ~4–8 units/week; advised complete avoidance with MTX",
+                "smoking": "15 cigarettes/day; cessation counseling reinforced"
+            },
+            "examination": {
+                "general": "Well; no jaundice",
+                "msk": "No active synovitis; mild residual hand deformities",
+                "vitals": {
+                    "bp_systolic": 132,
+                    "bp_diastolic": 80,
+                    "hr_bpm": 70,
+                    "rr_per_min": 16,
+                    "temperature_c": 36.7
+                }
+            },
+            "assessment": {
+                "impression": "Stable RA on MTX"
+            },
+            "plan": {
+                "continue_meds": [
+                    "Methotrexate 10 mg weekly",
+                    "Folic Acid 5 mg weekly"
+                ],
+                "orders": [
+                    "CBC",
+                    "LFTs",
+                    "Renal function (Creatinine, eGFR)"
+                ],
+                "counseling": [
+                    "Strict alcohol avoidance",
+                    "Smoking cessation; referral offered"
+                ]
+            },
+            "diagnoses": [
+                {
+                    "system": "SNOMED",
+                    "code": "69896004",
+                    "display": "Rheumatoid arthritis (disorder)",
+                    "status": "active"
+                }
+            ],
+            "tasks_prescriptions": {
+                "lab_orders": [
+                    "CBC",
+                    "LFTs",
+                    "Creatinine",
+                    "eGFR"
+                ]
+            },
+            "next_review": "2016-05-20"
+        },
+        {
+            "encounter_no": 3,
+            "meta": {
+                "date_time": "2018-09-05T10:00:00",
+                "visit_type": "Outpatient",
+                "provider": {
+                    "name": null,
+                    "specialty": "General Practice"
+                },
+                "ui_risk_color": "green"
+            },
+            "reason_for_visit": "Routine review; elevated blood pressure",
+            "hpc_ros": "Elevated BP readings 145–155/90–95; asymptomatic. RA well-controlled on MTX 10 mg but specialist advised increase to 20 mg for mild flares. Quit smoking in 2017; continues 1–2 beers/day.",
+            "medications_prior": [
+                {
+                    "name": "Methotrexate",
+                    "dose": "10 mg",
+                    "route": "PO",
+                    "frequency": "weekly"
+                },
+                {
+                    "name": "Folic Acid",
+                    "dose": "5 mg",
+                    "route": "PO",
+                    "frequency": "weekly"
+                },
+                {
+                    "name": "Paracetamol",
+                    "route": "PO",
+                    "frequency": "PRN"
+                }
+            ],
+            "alcohol_smoking": {
+                "alcohol": "1–2 beers/day (~7–14 units/week)",
+                "smoking": "Ex-smoker since 2017 (20 pack-years)"
+            },
+            "examination": {
+                "general": "Well",
+                "vitals": {
+                    "bp_systolic": 148,
+                    "bp_diastolic": 92,
+                    "hr_bpm": 72,
+                    "rr_per_min": 16,
+                    "temperature_c": 36.8
+                },
+                "cvs": "Normal S1/S2, no murmurs",
+                "msk": "No active synovitis"
+            },
+            "assessment": {
+                "impression": "New essential hypertension; RA stable; plan MTX dose increase"
+            },
+            "plan": {
+                "med_changes": [
+                    {
+                        "action": "start",
+                        "name": "Lisinopril",
+                        "dose": "10 mg",
+                        "route": "PO",
+                        "frequency": "daily"
+                    },
+                    {
+                        "action": "increase",
+                        "name": "Methotrexate",
+                        "dose": "20 mg",
+                        "route": "PO",
+                        "frequency": "weekly"
+                    }
+                ],
+                "orders": [
+                    "CBC",
+                    "LFTs",
+                    "Creatinine",
+                    "eGFR"
+                ],
+                "education": [
+                    "Lisinopril side effects (cough)",
+                    "Regular BP monitoring",
+                    "Reinforce alcohol moderation with higher MTX dose"
+                ]
+            },
+            "diagnoses": [
+                {
+                    "system": "SNOMED",
+                    "code": "383410000",
+                    "display": "Essential hypertension (disorder)",
+                    "status": "primary"
+                },
+                {
+                    "system": "SNOMED",
+                    "code": "69896004",
+                    "display": "Rheumatoid arthritis (disorder)",
+                    "status": "active"
+                }
+            ],
+            "billing": {
+                "qof": [
+                    "HYP",
+                    "RA"
+                ]
+            },
+            "tasks_prescriptions": {
+                "prescriptions": [
+                    {
+                        "drug": "Lisinopril 10 mg",
+                        "dispense": 30,
+                        "sig": "1 PO daily"
+                    },
+                    {
+                        "drug": "Methotrexate 2.5 mg tablets",
+                        "dispense": 32,
+                        "sig": "Take 8 tablets (20 mg) PO once weekly"
+                    }
+                ],
+                "lab_orders": [
+                    "CBC",
+                    "LFTs",
+                    "Creatinine",
+                    "eGFR"
+                ]
+            },
+            "next_review": "2018-10-03"
+        },
+        {
+            "encounter_no": 4,
+            "meta": {
+                "date_time": "2021-03-15T09:00:00",
+                "visit_type": "Outpatient",
+                "provider": {
+                    "name": null,
+                    "specialty": "General Practice"
+                },
+                "ui_risk_color": "green"
+            },
+            "reason_for_visit": "Routine chronic disease review (RA, HTN)",
+            "hpc_ros": "Overall well; RA controlled on MTX 20 mg; BP controlled on Lisinopril; occasional low back pain; eGFR mildly declined but stable; continues 1–2 beers/day.",
+            "current_meds": [
+                "Methotrexate 20 mg weekly",
+                "Folic Acid 5 mg weekly",
+                "Lisinopril 10 mg daily",
+                "Paracetamol PRN"
+            ],
+            "alcohol_smoking": {
+                "alcohol": "1–2 beers/day",
+                "smoking": "Ex-smoker since 2017"
+            },
+            "examination": {
+                "general": "Fit/well",
+                "vitals": {
+                    "bp_systolic": 130,
+                    "bp_diastolic": 82,
+                    "hr_bpm": 68,
+                    "rr_per_min": 16,
+                    "temperature_c": 36.7
+                },
+                "msk": "No synovitis",
+                "abdomen": "Soft, non-tender"
+            },
+            "assessment": {
+                "impression": "Stable RA; controlled HTN; chronic mild low back pain; mild CKD (stable)"
+            },
+            "plan": {
+                "continue_meds": [
+                    "MTX 20 mg weekly",
+                    "Folic Acid 5 mg weekly",
+                    "Lisinopril 10 mg daily"
+                ],
+                "orders": [
+                    "CBC",
+                    "LFTs",
+                    "Creatinine",
+                    "eGFR"
+                ],
+                "counseling": [
+                    "Hydration importance with CKD and ACE inhibitor",
+                    "Alcohol moderation"
+                ]
+            },
+            "diagnoses": [
+                {
+                    "system": "SNOMED",
+                    "code": "69896004",
+                    "display": "Rheumatoid arthritis (disorder)"
+                },
+                {
+                    "system": "SNOMED",
+                    "code": "383410000",
+                    "display": "Essential hypertension (disorder)"
+                },
+                {
+                    "system": "SNOMED",
+                    "code": "23643009",
+                    "display": "Mild chronic kidney disease (disorder)"
+                }
+            ],
+            "billing": {
+                "qof": [
+                    "RA",
+                    "HYP",
+                    "CKD"
+                ]
+            },
+            "tasks_prescriptions": {
+                "lab_orders": [
+                    "CBC",
+                    "LFTs",
+                    "Creatinine",
+                    "eGFR"
+                ]
+            },
+            "next_review": "2021-09-15"
+        },
+        {
+            "encounter_no": 5,
+            "meta": {
+                "date_time": "2025-06-15T10:30:00",
+                "visit_type": "Outpatient",
+                "provider": {
+                    "name": null,
+                    "specialty": "General Practice"
+                },
+                "ui_risk_color": "amber",
+                "ui_flags": [
+                    "New potentially hepatotoxic/interactive drug (TMP-SMX) started while on MTX"
+                ]
+            },
+            "reason_for_visit": "Sinusitis symptoms",
+            "hpc_ros": "5 days nasal congestion, facial pain, headache, green discharge; worse bending forward; afebrile; RA controlled; requests antibiotics; adherent to meds.",
+            "current_meds": [
+                "Methotrexate 20 mg weekly with Folic Acid 5 mg next day",
+                "Lisinopril 10 mg daily",
+                "Paracetamol PRN"
+            ],
+            "alcohol_smoking": {
+                "alcohol": "1–2 beers/day (7–14 units/week), no increase",
+                "smoking": "Ex-smoker; quit 2017; 20 pack-years"
+            },
+            "examination": {
+                "general": "NAD",
+                "ent": "Maxillary tenderness; congested nasal mucosa with mucopurulent discharge; OP clear",
+                "vitals": {
+                    "bp_systolic": 135,
+                    "bp_diastolic": 85,
+                    "hr_bpm": 72,
+                    "rr_per_min": 16,
+                    "temperature_c": 37.0
+                }
+            },
+            "assessment": {
+                "impression": "Acute bacterial sinusitis; RA/HTN/CKD stable"
+            },
+            "plan": {
+                "medications_started": [
+                    {
+                        "name": "Trimethoprim-Sulfamethoxazole",
+                        "dose": "800/160 mg",
+                        "route": "PO",
+                        "frequency": "BID",
+                        "duration_days": 10
+                    }
+                ],
+                "symptomatic_relief": [
+                    "Steam inhalation",
+                    "Analgesia as needed"
+                ],
+                "education": [
+                    "Potential side effects of TMP-SMX",
+                    "Seek care if worse or new symptoms"
+                ],
+                "documents_given": [
+                    "Patient education leaflet: sinusitis & TMP-SMX"
+                ]
+            },
+            "diagnoses": [
+                {
+                    "system": "SNOMED",
+                    "code": "22285007",
+                    "display": "Acute sinusitis (disorder)",
+                    "status": "primary"
+                }
+            ],
+            "tasks_prescriptions": {
+                "prescriptions": [
+                    {
+                        "drug": "TMP-SMX 800/160 mg",
+                        "dispense": 20,
+                        "sig": "1 PO twice daily for 10 days"
+                    }
+                ]
+            },
+            "next_review": "PRN or if symptoms persist >10 days"
+        },
+        {
+            "encounter_no": 6,
+            "meta": {
+                "visit_type": "ED",
+                "date_time": "2025-06-21T14:00:00",
+                "provider": {
+                    "name": "Dr. Sarah Chen",
+                    "specialty": "Emergency Medicine"
+                },
+                "ui_risk_color": "red",
+                "event_tags": [
+                    "Suspected DILI",
+                    "Potential MTX toxicity",
+                    "Acute liver failure risk"
+                ]
+            },
+            "chief_complaint": "Severe fatigue, jaundice, epigastric pain, confusion",
+            "hpi": "53-year-old female with 24h severe fatigue, jaundice, epigastric pain; 4–6 days prior noted fatigue, mouth ulcers, nausea; started TMP-SMX 6 days ago for sinusitis; adherent to meds; no fever/chills/cough/urinary symptoms; no trauma.",
+            "pmh": {
+                "liver": "No prior known disease",
+                "cirrhosis_complications": "None",
+                "comorbidities": [
+                    "Rheumatoid arthritis (10 years, controlled)",
+                    "Hypertension (7 years, controlled)",
+                    "Chronic low back pain",
+                    "Mild CKD (eGFR ~55, stable 4 years)"
+                ],
+                "surgical_history": [
+                    "Appendectomy (childhood)"
+                ]
+            },
+            "medications_prior": [
+                {
+                    "name": "Methotrexate",
+                    "dose": "20 mg",
+                    "route": "PO",
+                    "frequency": "weekly (Mon)"
+                },
+                {
+                    "name": "Folic Acid",
+                    "dose": "5 mg",
+                    "route": "PO",
+                    "frequency": "weekly (Tue)"
+                },
+                {
+                    "name": "Lisinopril",
+                    "dose": "10 mg",
+                    "route": "PO",
+                    "frequency": "daily"
+                },
+                {
+                    "name": "Trimethoprim-Sulfamethoxazole",
+                    "dose": "800/160 mg",
+                    "route": "PO",
+                    "frequency": "BID",
+                    "started_days_ago": 6
+                },
+                {
+                    "name": "Paracetamol",
+                    "route": "PO",
+                    "frequency": "PRN"
+                }
+            ],
+            "allergies": [
+                {
+                    "substance": "Penicillin",
+                    "reaction": "Rash"
+                }
+            ],
+            "review_of_systems": {
+                "cardio": "No chest pain/palpitations",
+                "respiratory": "No SOB/cough",
+                "gi": "Nausea, mouth ulcers, severe epigastric pain, jaundice; no vomiting/diarrhea/constipation/melena/hematochezia",
+                "neuro": "A&O x3 at triage; later drowsy",
+                "msk": "Chronic low back pain; RA stable",
+                "derm": "Jaundice; no new rashes",
+                "gu": "No dysuria/frequency/hematuria; dark urine"
+            },
+            "physical_exam": {
+                "general": "Jaundiced, fatigued, drowsy; disoriented to time/place",
+                "abdomen": "Soft, non-distended; mild epigastric tenderness; no HSM/ascites",
+                "peripheral": "No pedal edema; no bruising/palmar erythema",
+                "cns": "Arousable; PERL; slow commands; asterixis present; GCS 13 (E4 V3 M6)",
+                "skin": "Generalized icterus; mild oral mucosal ulcerations"
+            },
+            "assessment": {
+                "impression": "Acute liver injury likely DILI and/or severe methotrexate toxicity",
+                "differential": [
+                    "Severe methotrexate toxicity (± pancytopenia, hepatic/renal injury)",
+                    "TMP-SMX–induced DILI",
+                    "Acute viral hepatitis",
+                    "Acute decompensation of undiagnosed chronic liver disease",
+                    "Sepsis with multiorgan dysfunction"
+                ]
+            },
+            "plan": {
+                "investigations": {
+                    "labs": [
+                        "CBC",
+                        "CMP (electrolytes, LFTs, renal function)",
+                        "INR/PTT",
+                        "Ammonia",
+                        "Methotrexate level (urgent)",
+                        "HAV IgM",
+                        "HBsAg",
+                        "anti-HBc IgM",
+                        "anti-HCV",
+                        "Autoimmune panel (ANA, ASMA, LKM)",
+                        "Ceruloplasmin",
+                        "Alpha-1 antitrypsin",
+                        "G6PD",
+                        "Blood cultures x2"
+                    ],
+                    "imaging": [
+                        "Abdominal Ultrasound (STAT)"
+                    ]
+                },
+                "management": {
+                    "supportive": [
+                        "IV fluids",
+                        "Strict I/O",
+                        "Frequent neuro & vitals monitoring",
+                        "NPO until stable"
+                    ],
+                    "antidote": [
+                        "Initiate N-acetylcysteine protocol empirically"
+                    ],
+                    "admit_to": "ICU/HDU",
+                    "alerts": [
+                        "Immediate notification of critical lab results"
+                    ]
+                }
+            },
+            "orders": {
+                "labs": [
+                    "CBC",
+                    "CMP",
+                    "INR/PTT",
+                    "Ammonia",
+                    "Methotrexate level (urgent)",
+                    "HAV IgM",
+                    "HBsAg",
+                    "anti-HBc IgM",
+                    "anti-HCV",
+                    "ANA",
+                    "ASMA",
+                    "LKM",
+                    "Ceruloplasmin",
+                    "Alpha-1 antitrypsin",
+                    "G6PD",
+                    "Blood cultures x2"
+                ],
+                "imaging": [
+                    "Abdominal Ultrasound (STAT)"
+                ]
+            },
+            "diagnoses": [],
+            "billing": {
+                "icd10": [
+                    "K71.1",
+                    "T45.1X5A",
+                    "T36.0X5A"
+                ],
+                "cpt": [
+                    "99285"
+                ]
+            },
+            "follow_up": {
+                "disposition": "Admit to ICU/HDU",
+                "instructions": [
+                    "Frequent neuro/vital monitoring",
+                    "Strict I/O",
+                    "Immediate notification for critical labs",
+                    "NPO until stable"
+                ]
+            },
+            "safety_flags": {
+                "dili_suspected": true,
+                "hy_law_status": "suspected_red",
+                "rationale": "Acute jaundice, encephalopathy, recent TMP-SMX with chronic MTX use; labs pending"
+            },
+            "rucam_ctcae_analysis": {
+                "rucam": {
+                    "title": "RUCAM Scoring (Hepatocellular pattern)",
+                    "columns": [
+                        "#",
+                        "Parameter",
+                        "Key findings from this case",
+                        "Score",
+                        "Explanation"
+                    ],
+                    "rows": [
+                        [
+                            1,
+                            "Time to onset (from drug start to injury)",
+                            "TMP-SMX started Jun 15 → symptoms Jun 20 → presentation Jun 21 (≈6 days)",
+                            2,
+                            "Compatible interval for idiosyncratic hepatocellular DILI (5–90 days)."
+                        ],
+                        [
+                            2,
+                            "Course after stopping the drug",
+                            "TMP-SMX and MTX held on admission; recovery not yet documented but improvement expected",
+                            1,
+                            "Early improvement expected; data incomplete at time of scoring."
+                        ],
+                        [
+                            3,
+                            "Risk factors",
+                            "Age 53 (+1); chronic alcohol consumption (+1)",
+                            2,
+                            "Age >55 and ongoing alcohol use increase risk."
+                        ],
+                        [
+                            4,
+                            "Concomitant drugs",
+                            "Methotrexate (hepatotoxic; interacts with TMP-SMX)",
+                            -1,
+                            "Confounding co-drug complicates attribution."
+                        ],
+                        [
+                            5,
+                            "Exclusion of non-drug causes",
+                            "Viral hepatitis pending; no history/exposure; ultrasound ordered; no ischemic/septic event",
+                            1,
+                            "Alternatives considered and largely excluded clinically."
+                        ],
+                        [
+                            6,
+                            "Previous information on hepatotoxicity",
+                            "Methotrexate and TMP-SMX both well-known for hepatotoxicity and interaction",
+                            2,
+                            "Documented reactions in literature/databases."
+                        ],
+                        [
+                            7,
+                            "Response to re-exposure",
+                            "Not applicable (no re-challenge)",
+                            0,
+                            "—"
+                        ]
+                    ],
+                    "total_score": 7,
+                    "causality_category": "Probable"
+                },
+                "ctcae": {
+                    "title": "CTCAE Hepatic Toxicity Scoring",
+                    "columns": [
+                        "Criterion",
+                        "Observed / Inferred",
+                        "CTCAE Grade",
+                        "Explanation"
+                    ],
+                    "rows": [
+                        [
+                            "ALT/AST",
+                            "Markedly elevated (likely >20× ULN)",
+                            "4",
+                            "ALT/AST >20× ULN → life-threatening elevation."
+                        ],
+                        [
+                            "Total Bilirubin",
+                            "Jaundice evident (likely ≥3× ULN; ~≥3 mg/dL)",
+                            "3–4",
+                            "Hyperbilirubinemia with clinical jaundice."
+                        ],
+                        [
+                            "INR / Coagulopathy",
+                            "Rising INR; impaired synthetic function",
+                            "4",
+                            "Coagulopathy (± encephalopathy) consistent with acute liver failure."
+                        ],
+                        [
+                            "Clinical Presentation",
+                            "Jaundice, asterixis, disorientation (hepatic encephalopathy)",
+                            "4",
+                            "Life-threatening consequences; urgent intervention needed."
+                        ]
+                    ],
+                    "overall_grade": "CTCAE Grade 4 — Life-threatening; requires urgent intervention"
+                },
+                "reasoning": "The patient developed acute jaundice, confusion, and hepatic tenderness shortly after initiating TMP-SMX (started June 15; symptoms June 20; presentation June 21), a timeline that strongly fits idiosyncratic hepatocellular DILI. There is low likelihood of alternative causes—no fever or hemodynamic instability to suggest ischemic or septic hepatitis, viral panels are pending with low pretest probability, and there is no autoimmune or metabolic history. Mechanistically, TMP-SMX can raise free methotrexate levels and impair folate metabolism; in an older patient with alcohol use (and possible CKD), this pharmacologic interaction plausibly potentiates hepatocellular necrosis and explains concurrent mucosal/CNS findings. The clinical pattern is hepatocellular (expected ALT > AST ≫ ALP) and the presence of encephalopathy with presumed INR >1.5 and elevated bilirubin meets criteria for non-acetaminophen acute liver failure. RUCAM totals 7 (Probable), with TMP-SMX as the primary culprit and methotrexate as a significant co-factor. Immediate management includes withdrawal of both agents, initiation of N-acetylcysteine, aggressive supportive care, and ICU-level monitoring."
+            }
+        }
+    ]
+}

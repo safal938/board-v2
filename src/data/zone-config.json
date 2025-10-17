@@ -1,0 +1,77 @@
+{
+  "zones": [
+    {
+      "name": "adv-event-zone",
+      "label": "Adverse Events Zone",
+      "x": 0,
+      "y": 0,
+      "width": 4000,
+      "height": 2100,
+      "color": "#4CAF50",
+      "gradient": "linear-gradient(135deg, rgba(190, 190, 190, 0.5) 0%, rgba(158, 158, 158, 0.6) 50%, rgba(224, 224, 224, 0.4) 100%)",
+      "borderGradient": "linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%)",
+      "description": "System-level components and monitoring"
+    },
+    {
+      "name": "raw-ehr-data-zone",
+      "label": "Raw EHR Data Zone",
+      "x": 0,
+      "y": -4600,
+      "width": 4000,
+      "height": 3000,
+      "color": "#9C27B0",
+      "gradient": "linear-gradient(135deg, rgba(156, 39, 176, 0.1) 0%, rgba(142, 36, 170, 0.15) 50%, rgba(156, 39, 176, 0.1) 100%)",
+      "borderGradient": "linear-gradient(135deg, #8E24AA 0%, #9C27B0 100%)",
+      "description": "Raw data from different EHR systems (Nervecentre, Medilogik, Viper, ICE, BigHand)"
+    },
+    {
+      "name": "data-zone",
+      "label": "Data Zone- Encounter Wise Processed Data",
+      "x": 0,
+      "y": -1300,
+      "width": 4000,
+      "height": 1000,
+      "color": "#FFA500",
+      "gradient": "linear-gradient(135deg, rgba(255, 165, 0, 0.1) 0%, rgba(255, 140, 0, 0.15) 50%, rgba(255, 165, 0, 0.1) 100%)",
+      "borderGradient": "linear-gradient(135deg, #FF8C00 0%, #FFA500 100%)",
+      "description": "Data visualization and analytics"
+    },
+    {
+      "name": "retrieved-data-zone",
+      "label": "Raw Data Zone - On Request Retrieved Data",
+      "x": 4200,
+      "y": -4600,
+      "width": 2000,
+      "height": 2100,
+      "color": "#9C27B0",
+      "gradient": "linear-gradient(135deg, rgba(156, 39, 176, 0.1) 0%, rgba(142, 36, 170, 0.15) 50%, rgba(156, 39, 176, 0.1) 100%)",
+      "borderGradient": "linear-gradient(135deg, #8E24AA 0%, #9C27B0 100%)",
+       "description": "Data visualization and analytics"
+    },
+    {
+      "name": "task-management-zone",
+      "label": "Task Management Zone",
+      "x": 4200,
+      "y": 0,
+      "width": 2000,
+      "height": 2100,
+      "color": "#2196F3",
+      "gradient": "linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(30, 136, 229, 0.15) 50%, rgba(33, 150, 243, 0.1) 100%)",
+      "borderGradient": "linear-gradient(135deg, #1E88E5 0%, #2196F3 100%)",
+      "description": "Agent results, todos, and lab results from API"
+    }
+  ],
+  "settings": {
+    "borderWidth": 3,
+    "borderStyle": "solid",
+    "backgroundOpacity": 1,
+    "borderRadius": 12,
+    "labelFontSize": 13,
+    "labelFontWeight": "600",
+    "labelPadding": "6px 12px",
+    "labelBackgroundColor": "rgba(255, 255, 255, 0.95)",
+    "labelTextColor": "#333",
+    "boxShadow": "0 4px 20px rgba(0, 0, 0, 0.1)",
+    "hoverEffect": true
+  }
+}
