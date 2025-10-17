@@ -1,0 +1,19 @@
+{
+  "addOns": {
+    "common": {
+      "name": "MedForce AI - Patient canvas",
+      "logoUrl": "https://www.gstatic.com/images/branding/product/1x/apps_script_48dp.png"
+    },
+    "meet": {
+      "web": {
+        "supportsScreenSharing": true,
+        "logoUrl": "https://www.gstatic.com/images/branding/product/1x/apps_script_48dp.png",
+        "addOnOrigins": ["https://patientcanvas-ai.vercel.app"],
+        "sidePanelUrl": "https://patientcanvas-ai.vercel.app/meet/Sidepanel"
+      }
+    },
+    "httpOptions": {
+      "granularOauthPermissionSupport": "OPT_IN"
+    }
+  }
+}
