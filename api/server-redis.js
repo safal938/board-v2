@@ -847,7 +847,7 @@ app.post('/api/focus', (req, res) => {
     timestamp: new Date().toISOString() 
   };
   
-  broadcastSSE({ event: 'focus', ...payload });
+  broadcastSSE({ event: 'focus-item', ...payload });
   
   res.json({ 
     success: true, 

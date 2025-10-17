@@ -218,7 +218,7 @@ const MeetSidePanel: React.FC = () => {
 
     try {
       // Use the direct API endpoint
-      const API_URL = 'https://api.medforce-ai.com';
+      const API_URL = 'https://api3.medforce-ai.com';
       const endpoint = `${API_URL}/join-meeting`;
       
       // Use custom URL if provided, otherwise use detected meeting URL

@@ -90,12 +90,22 @@ const Canvas = ({
 
   // Center viewport on specific item with simple 3-step animation
   const centerOnItem = useCallback((itemId, finalZoom = 0.8, duration = 3000) => {
+    console.log('🎬 centerOnItem CALLED with:', { itemId, finalZoom, duration });
     const item = items.find((i) => i.id === itemId);
-    if (!item || !canvasRef.current) return;
+    console.log('🔍 Found item:', item ? `${item.id} (${item.type})` : 'NOT FOUND');
+    
+    if (!item || !canvasRef.current) {
+      console.error('❌ centerOnItem aborted:', !item ? 'item not found' : 'canvasRef not available');
+      return;
+    }
 
     const container = canvasRef.current.parentElement;
-    if (!container) return;
+    if (!container) {
+      console.error('❌ centerOnItem aborted: container not found');
+      return;
+    }
 
+    console.log('✅ Starting focus animation...');
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
 
@@ -280,11 +290,10 @@ const Canvas = ({
 
   // Expose centerOnItem function to parent
   useEffect(() => {
-    if (onFocusRequest) {
-      // Make centerOnItem available globally for focus requests
-      (window as any).centerOnItem = centerOnItem;
-    }
-  }, [centerOnItem, onFocusRequest]);
+    // Make centerOnItem available globally for focus requests
+    (window as any).centerOnItem = centerOnItem;
+    console.log('✅ window.centerOnItem is now available:', typeof (window as any).centerOnItem);
+  }, [centerOnItem]);
 
   // Expose helper to place an item at current viewport center and persist
   useEffect(() => {
