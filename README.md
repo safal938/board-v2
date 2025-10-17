@@ -19,6 +19,7 @@ A modern collaborative medical dashboard application for adverse event monitorin
 - ✅ **Voice-Driven Navigation**: API integration for voice commands to focus canvas items
 - ✅ **SSE Broadcasting**: Real-time focus events across all connected clients
 - ✅ **Enhanced API**: `POST /api/focus` with support for `subElement` and `focusOptions`
+- 📖 **Full Documentation**: See [FOCUS_SYSTEM_PORTED.md](./FOCUS_SYSTEM_PORTED.md) for complete details
 
 ### Redis Integration & Deployment
 - ✅ **Redis Persistence**: Optional Redis integration for permanent data storage

@@ -191,53 +191,57 @@ function BoardApp() {
 
   // Handle focus requests from POST requests (simulated)
   const handleFocusRequest = useCallback((request) => {
-    console.log('🎯 Focus request received:', request);
+    console.log('🎯🎯🎯 handleFocusRequest ENTRY POINT called with:', request);
+    console.log('📋 Total items in state:', items.length);
     console.log('📋 Available items:', items.map(i => ({ id: i.id, type: i.type })));
     
     const targetId = request.objectId || request.itemId;
+    console.log('🔍 Looking for item with ID:', targetId);
+    
     const item = items.find(i => i.id === targetId);
     
     if (item) {
-      console.log('✅ Item found, focusing:', item.id, item.type);
-      
-      // Extract focus options with defaults
-      const focusOptions = request.focusOptions || {};
-      const zoom = focusOptions.zoom || 0.8;
-      const duration = focusOptions.duration || 3000;
+      console.log('✅✅✅ Item FOUND! Focusing:', item.id, item.type);
+      console.log('✅ Item details:', { x: item.x, y: item.y, width: item.width, height: item.height });
       
       // First select the item
       focusOnItem(targetId);
       
-      // Handle sub-element focusing
-      if (request.subElement) {
-        console.log('🎯 Sub-element focus requested:', request.subElement);
-        
-        // Add highlight to sub-element if it exists
-        setTimeout(() => {
-          const subElement = document.querySelector(`[data-focus-id="${request.subElement}"]`);
-          if (subElement) {
-            console.log('✨ Highlighting sub-element:', request.subElement);
-            subElement.classList.add('focus-highlighted');
-            
-            // Remove highlight after animation
-            setTimeout(() => {
-              subElement.classList.remove('focus-highlighted');
-            }, duration);
-          } else {
-            console.warn('⚠️ Sub-element not found:', request.subElement);
-          }
-        }, 100);
-      }
+      // Get focus options
+      const zoom = request.focusOptions?.zoom || 0.8;
+      const duration = request.focusOptions?.duration || 3000;
       
-      // Center the viewport on the item
+      console.log('🔍 Checking if window.centerOnItem exists:', typeof (window as any).centerOnItem);
+      
+      // Center the viewport on it
       if ((window as any).centerOnItem) {
-        console.log('🚀 Calling centerOnItem with:', targetId, 'zoom:', zoom, 'duration:', duration);
+        console.log('🚀🚀🚀 Calling centerOnItem with:', { targetId, zoom, duration });
         (window as any).centerOnItem(targetId, zoom, duration);
+        console.log('✅ centerOnItem call completed');
+        
+        // If sub-element specified, highlight it after animation completes
+        if (request.subElement && request.focusOptions?.highlight) {
+          console.log('� Will highlight sub-element:', request.subElement);
+          setTimeout(() => {
+            const itemElement = document.querySelector(`[data-item-id="${targetId}"]`);
+            const subElement = itemElement?.querySelector(`[data-focus-id="${request.subElement}"]`);
+            
+            if (subElement) {
+              console.log('✨ Highlighting sub-element');
+              subElement.classList.add('focus-highlighted');
+              setTimeout(() => {
+                subElement.classList.remove('focus-highlighted');
+              }, 2000);
+            } else {
+              console.warn('⚠️ Sub-element not found:', request.subElement);
+            }
+          }, duration);
+        }
       } else {
         console.error('❌ centerOnItem function not available on window');
       }
     } else {
-      console.error('❌ Item not found:', targetId);
+      console.error('❌❌❌ Item NOT FOUND:', targetId);
       console.error('📋 Available item IDs:', items.map(i => i.id).join(', '));
     }
   }, [items, focusOnItem]);
@@ -277,11 +281,12 @@ function BoardApp() {
       try {
         // Connect directly to the backend SSE endpoint
         const sseUrl = `${API_BASE_URL}/api/events`;
-        console.log('🔌 Connecting to SSE:', sseUrl);
+        console.log('🔌🔌🔌 CONNECTING TO SSE:', sseUrl);
+        console.log('🔌 Browser EventSource support:', typeof EventSource !== 'undefined');
         es = new EventSource(sseUrl);
 
         es.addEventListener('connected', () => {
-          console.log('✅ Connected to SSE:', sseUrl);
+          console.log('✅✅✅ SUCCESSFULLY CONNECTED TO SSE:', sseUrl);
         });
 
         es.addEventListener('ping', (event: any) => {
@@ -289,17 +294,26 @@ function BoardApp() {
           console.log('💓 SSE heartbeat:', new Date(parseInt(event.data)).toISOString());
         });
 
-        es.addEventListener('focus', (event: any) => {
+        es.addEventListener('focus-item', (event: any) => {
           try {
+            console.log('📨 RAW focus-item event received:', event);
+            console.log('📨 RAW focus-item event.data:', event.data);
             const data = JSON.parse(event.data);
-            console.log('🎯 Focus event received via SSE:', data);
+            console.log('🎯 PARSED focus-item event data:', data);
+            console.log('🎯 Calling handleFocusRequest with:', {
+              objectId: data.objectId || data.itemId,
+              subElement: data.subElement,
+              focusOptions: data.focusOptions
+            });
             handleFocusRequest({
               objectId: data.objectId || data.itemId,
               subElement: data.subElement,
               focusOptions: data.focusOptions
             });
+            console.log('✅ handleFocusRequest called successfully');
           } catch (err) {
-            console.error('❌ Error handling focus event:', err);
+            console.error('❌ Error handling focus-item event:', err);
+            console.error('❌ Error stack:', (err as Error).stack);
           }
         });
 
